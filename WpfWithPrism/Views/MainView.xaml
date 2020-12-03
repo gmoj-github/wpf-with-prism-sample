@@ -2,9 +2,12 @@
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:prism="http://prismlibrary.com/"
+             xmlns:properties="clr-namespace:WpfWithPrism.Properties"
              prism:ViewModelLocator.AutoWireViewModel="True">
+    
     <StackPanel HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Background="Blue">
-        <Button Content="Register" 
+
+        <Button Content="{x:Static properties:Resources.REGISTER_BUTTON}"
                 Command="{Binding RegisterCommand}"
                 HorizontalAlignment="Stretch"
                 VerticalAlignment="Top"
@@ -17,5 +20,7 @@
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
+        
     </StackPanel>
+    
 </UserControl>
